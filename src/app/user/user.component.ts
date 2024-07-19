@@ -1,7 +1,4 @@
-import { Component, signal, computed } from '@angular/core';
-import { DUMMY_USERS } from '../dummy-users';
-
-const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
+import { Component, Input, Output, EventEmitter, output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -11,25 +8,20 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  // Using Signal for state management.
-  selectedUser = signal(DUMMY_USERS[randomIndex]);
-  imagePath = computed(() => 'assets/users/' + this.selectedUser().avatar);
+  @Input({ required: true }) id!: string;
+  @Input({ required: true }) avatar!: string;
+  @Input({ required: true }) name!: string;
 
-  // get imagePath() {
-  //   return 'assets/users/' + this.selectedUser.avatar;
-  // }
+  @Output() select = new EventEmitter();
 
-  /**
-   * This method is used to select a random user from the dummy users list.
-   * It updates the `selectedUser` property with the new random user.
-   *
-   * @returns {void}
-   */
+  // A different approach of getting the EventEmitter is using the following syntax:
+  // select = output<string>();
+
+  get imagePath() {
+    return 'assets/users/' + this.avatar;
+  }
+
   onSelectUser() {
-    // Generate a random index within the range of the dummy users array
-    const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-
-    // Update the selectedUser property with the new random user
-    this.selectedUser.set(DUMMY_USERS[randomIndex]);
+    this.select.emit(this.id);
   }
 }
