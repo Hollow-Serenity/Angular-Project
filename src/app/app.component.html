@@ -12,7 +12,7 @@
 
   <!-- Checking if selectedUser is not null and displaying Tasks component with selectedUser's name -->
   @if (selectedUser) {
-  <app-tasks [name]="selectedUser ? selectedUser.name : ''" />
+  <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
   <p id="fallback">Select a user to see their tasks</p>
   }
