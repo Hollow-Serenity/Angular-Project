@@ -20,6 +20,7 @@ To try out any of these projects:
 1. Clone the repository:
  
 ```git clone https://github.com/Hollow-Serenity/Angular-Project.git```
+
 ```cd Angular-Project```
 
 
