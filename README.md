@@ -26,19 +26,26 @@ To try out any of these projects:
 
 Navigate to the project folder you want to explore:
 
+
 ```cd project-name```
+
+
 Install dependencies:
 
 ```npm install```
+
+
 Run the project:
 
 ```ng serve```
+
+
 Open your browser and navigate to http://localhost:4200/ to see it in action.
 
-Why This Repo?
+##Why This Repo?
 Angular can feel overwhelming when starting out. By working on small, focused projects, I’ve been able to gradually understand how different parts of Angular fit together. I hope this collection helps other developers feel more comfortable with Angular and inspires them to build their own projects!
 
-Contributing
+##Contributing
 If you have ideas for small Angular projects or want to contribute to these examples, feel free to submit a pull request or reach out!
 
 Let’s keep learning and building! 💪
