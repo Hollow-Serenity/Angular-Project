@@ -6,12 +6,7 @@ import {
   output,
   input,
 } from '@angular/core';
-
-interface User {
-  id: string;
-  avatar: string;
-  name: string;
-}
+import { type User } from './user.model';
 
 @Component({
   selector: 'app-user',
@@ -21,11 +16,7 @@ interface User {
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  @Input({ required: true }) user!: {
-    id: string;
-    name: string;
-    avatar: string;
-  };
+  @Input({ required: true }) user!: User;
   @Output() select = new EventEmitter();
 
   // A different approach of getting the EventEmitter is using the following syntax:
