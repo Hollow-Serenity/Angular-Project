@@ -1,8 +1,7 @@
-<app-header></app-header>
+<app-header />
 
 <main>
   <ul id="users">
-    <!-- Using Angular's *ngFor directive to iterate over users array -->
     @for (user of users; track user.id) {
     <li>
       <app-user
@@ -14,10 +13,9 @@
     }
   </ul>
 
-  <!-- Checking if selectedUser is not null and displaying Tasks component with selectedUser's name -->
   @if (selectedUser) {
   <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
-  <p id="fallback">Select a user to see their tasks</p>
+  <p id="fallback">Select a user to see their tasks!</p>
   }
 </main>
