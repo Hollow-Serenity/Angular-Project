@@ -11,6 +11,7 @@ Here’s a list of some of the Angular projects in this repository:
 
 - **Project 1 - Simple Task List**: A basic task list in Angular to understand the fundamentals of Angular.
 - **Project 2 - Investment Calculator App**: Like a calculator, but a fun little project for "predicting" certain investments.
+- **Project 3 - Mini Management App**: A simple management app to track management related tasks, split into smaller components for added complexity.
 
 Feel free to explore each folder for detailed READMEs and instructions for each project.
 
